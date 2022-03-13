@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  /* COLOR VARIABLES */
+
+  /* PRIMARY */
+  --col-bright-orange: hsl(31, 77%, 52%);
+  --col-dark-cyan: hsl(184, 100%, 22%);
+  --col-darker-cyan: hsl(179, 100%, 13%);
+
+  /* NEUTRAL */
+  --col-white-trans: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+  --col-gray-lt: hsl(0, 0%, 95%); /* bkgs headings buttons */
+
+  /* FONT */
+  --font-sz-main: 15px;
+  --font-big-shoulders: 'Big Shoulders Display', cursive;
+  --font-lexend: 'Lexend Deca', sans-serif;
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  height: 55%;
+  width: 60rem;
+}
+
+/* .body,
+.logo {
+  border: 2px solid black;
+} */
+
+.body {
+  height: 70%;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: var(--font-big-shoulders);
+  margin-bottom: 30px;
+}
+
+p {
+  font-family: var(--font-lexend);
+  font-size: var(--font-size-p);
+  line-height: 1.7;
+}
+
+.sedans,
+.suvs,
+.luxury {
+  display: flex;
+  flex-direction: column;
+  color: var(--col-white-trans);
+  padding: 2.4rem;
+  justify-content: space-between;
+}
+
+.sedans {
+  background-color: var(--col-bright-orange);
+  border-radius: 10px 0 0 10px;
+}
+
+.sedans .btn {
+  color: var(--col-bright-orange);
+}
+
+.suvs {
+  background-color: var(--col-dark-cyan);
+}
+
+.suvs .btn {
+  color: var(--col-dark-cyan);
+}
+
+.luxury {
+  background-color: var(--col-darker-cyan);
+  border-radius: 0 10px 10px 0;
+}
+
+.luxury .btn {
+  color: var(--col-darker-cyan)
+}
+
+.btn {
+  background-color: var(--col-white-trans);
+  cursor: pointer;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 20px;
+  width: 10rem;
+}
+
+.btn:hover {
+  color: var(--col-white-trans);
+  border: 2px solid var(--col-white-trans);
+  background-color: inherit;
+  padding: 13px 18px;
+}
+
+@media (max-width: 1100px) {
+  .card {
+    flex-direction: column;
+    width: 20rem;
+    height: 90%;
+  }
+
+  h1,
+  .btn {
+    margin-top: 20px;
+  }
+
+  .sedans {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .sedans,
+  .suvs,
+  .luxury {
+    padding: 2.7rem;
+  }
+}
